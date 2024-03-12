@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h1>House Price Prediction</h1>
+    <form action="{{ url_for('predict')}}" method="post">
+                
+        <label for="area">Area (square feet):</label>
+        <input type="number" id="area" name="area" required><br><br>
+
+        <label for="bedrooms">Number of Bedrooms:</label>
+        <input type="number" id="bedrooms" name="bedrooms" required><br><br>
+
+        <label for="bathrooms">Number of Bathrooms:</label>
+        <input type="number" id="bathrooms" name="bathroom" required><br><br>
+
+        <label for="stories">Number of stories:</label>
+        <input type="number" id="stories" name="stories" required><br><br>
+
+        <label for="mainroad">Has main road access (yes/no):</label>
+        <input type="text" id="mainroad" name="mainroad" required><br><br>
+
+        <label for="guestroom">Has guestroom (yes/no):</label>
+        <input type="text" id="guestroom" name="guestroom" required><br><br>
+
+        <label for="basement">Has basement (yes/no):</label>
+        <input type="text" id="basement" name="basement" required><br><br>
+
+        <label for="hotwaterheater">Has hot water heater (yes/no):</label>
+        <input type="text" id="hotwaterheater" name="hotwaterheating" required><br><br>
+
+        <label for="airconditic">Has air conditioning (yes/no):</label>
+        <input type="text" id="airconditic" name="airconditioning" required><br><br>
+
+        <label for="parking">Number of parking spaces:</label>
+        <input type="number" id="parking" name="parking" required><br><br>
+
+        <label for="prefarea">Preferred area:</label>
+        <input type="text" id="prefarea" name="prefarea"><br><br>
+
+        <label for="furnishingstatus">Furnishing status:</label>
+        <input type="text" id="furnishingstatus" name="furnishingstatus"><br><br>
+
+        <button type="submit">Predict Price</button>
+        
+<h2>THE FWI prediction is {{result}}</h2>
+
+    </form>
+</body>
+</html>
