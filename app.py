@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__, template_folder='templates')
 
 # Load the machine learning model
-model = pickle.load(open(r"linear_regression_model_main.pkl", "rb"))
+model = pickle.load(open(r"HOUSE_PRZE.pkl", "rb"))
 
 @app.route('/', methods=['GET'])
 def home():
